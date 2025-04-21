@@ -26,12 +26,15 @@ const Header = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Главная
-                </NavigationMenuLink>
-              </Link>
+              {/* Исправлено: используем NavigationMenuLink вместо вложения Link внутри NavigationMenuLink */}
+              <NavigationMenuLink 
+                className={navigationMenuTriggerStyle()} 
+                asChild
+              >
+                <Link to="/">Главная</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
+            
             <NavigationMenuItem>
               <NavigationMenuTrigger>Услуги</NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -48,19 +51,25 @@ const Header = () => {
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
+            
             <NavigationMenuItem>
-              <Link to="/about">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Обо мне
-                </NavigationMenuLink>
-              </Link>
+              {/* Исправлено: используем NavigationMenuLink вместо вложения Link внутри NavigationMenuLink */}
+              <NavigationMenuLink 
+                className={navigationMenuTriggerStyle()} 
+                asChild
+              >
+                <Link to="/about">Обо мне</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
+            
             <NavigationMenuItem>
-              <Link to="/contacts">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Контакты
-                </NavigationMenuLink>
-              </Link>
+              {/* Исправлено: используем NavigationMenuLink вместо вложения Link внутри NavigationMenuLink */}
+              <NavigationMenuLink 
+                className={navigationMenuTriggerStyle()} 
+                asChild
+              >
+                <Link to="/contacts">Контакты</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
